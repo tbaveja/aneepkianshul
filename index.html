@@ -90,7 +90,7 @@
       <img
         id="thumb-image"
         class="thumb-image fa-play-circle"
-        src="https://www.weddingwishlist.com/skin/frontend/default/theme692/images/sound-off.png"
+        src="images/sound-off.png"
       /><span
         class="unmute"
         style="
@@ -189,21 +189,21 @@
     <section class="countdown-section">
       <div class="countdown-banner header-countdown">
         <div class="countdown-value">
-          <div class="timer days">26</div>
+          <div class="timer days"></div>
           <div class="title">Days</div>
         </div>
         <div class="countdown-value">
-          <div class="timer hours">05</div>
+          <div class="timer hours"></div>
           <div class="title">Hours</div>
         </div>
         <div class="count-down-message">Countdown<br />to our big day!</div>
         <div class="countdown-value">
-          <div class="timer min">09</div>
+          <div class="timer min"></div>
           <div class="title d-none d-sm-none d-md-block">Minutes</div>
           <div class="title d-sm-block d-md-none">Mins</div>
         </div>
         <div class="countdown-value">
-          <div class="timer sec">22</div>
+          <div class="timer sec"></div>
           <div class="title d-none d-sm-none d-md-block">Seconds</div>
           <div class="title d-sm-block d-md-none">Secs</div>
         </div>
@@ -501,24 +501,24 @@
     
     <!-- Count Down Section Start -->
     <section class="countdown-section bottom-countdown">
-<p id="demo"></p>
+
       <div class="countdown-banner header-countdown">
         <div class="countdown-value">
-          <div class="timer days">26</div>
+          <div class="timer days"></div>
           <div class="title">Days</div>
         </div>
         <div class="countdown-value">
-          <div class="timer hours">05</div>
+          <div class="timer hours"></div>
           <div class="title">Hours</div>
         </div>
         <div class="count-down-message">Countdown<br />to our big day!</div>
         <div class="countdown-value">
-          <div class="timer min">09</div>
+          <div class="timer min"></div>
           <div class="title d-none d-sm-none d-md-block">Minutes</div>
           <div class="title d-sm-block d-md-none">Mins</div>
         </div>
         <div class="countdown-value">
-          <div class="timer sec">22</div>
+          <div class="timer sec"></div>
           <div class="title d-none d-sm-none d-md-block">Seconds</div>
           <div class="title d-sm-block d-md-none">Secs</div>
         </div>
@@ -547,7 +547,7 @@
       </div>
       <div class="powered-by-footer">
         Designed & Developed By
-        <a class="powered-by-footer-tag" href="https://www.weddingwishlist.com/"
+        <a class="powered-by-footer-tag" href="http://facebook/com/tbaveja"
           >Tarun Baveja</a
         >
       </div>
@@ -576,9 +576,6 @@
       src="js/common_website.js"
     ></script>
  
-  
-   
-   
     <style>
       #alert-notification-modal {
         z-index: 9999999;
@@ -679,6 +676,32 @@
         background-color: #8d170e;
         border-color: #8d170e;
       }
+	  
+	  .flipster--coverflow .flipster__item--future .flipster__item__content {
+		transform: scale(.75) rotateY(-40deg);
+		}
+		
+		.powered-by-footer {
+			background: #B6060D;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.powered-by-footer-tag {
+			color: #df9f07;
+		}
+		
+		a.powered-by-footer-tag:hover {
+			color: #fff !important;
+		}
+		
+		.primary-footer {
+			margin-bottom: 50px;
+		}
     </style>
     <!-- Alert Modal starts -->
     <div id="alert-notification-modal" class="modal fade">
@@ -760,10 +783,12 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+    jQuery(".days").html(days);
+    jQuery(".hours").html(hours);
+    jQuery(".min").html(minutes);
+    jQuery(".sec").html(seconds);
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + " Days " + hours + " Hours "
-  + minutes + " Minutes " + seconds + " Seconds ";
+
     
   // If the count down is over, write some text 
   if (distance < 0) {

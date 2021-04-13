@@ -143,11 +143,11 @@ $(document)
         if (siteTheme == 'theme24') { jQuery('.menu').trigger('click'); }
     })
     .on("click", '.fa-play-circle', function () {
-        jQuery(this).addClass("fa-pause-circle").removeClass("fa-play-circle").attr("src", customBaseURL+"/skin/frontend/default/theme692/images/sound-on.png");
+        jQuery(this).addClass("fa-pause-circle").removeClass("fa-play-circle").attr("src", "images/sound-on.png");
         jQuery('body').find('#mymusic').get(0).play();
     })
     .on("click", '.fa-pause-circle', function () {
-        jQuery(this).addClass("fa-play-circle").removeClass("fa-pause-circle").attr("src", customBaseURL+"/skin/frontend/default/theme692/images/sound-off.png");
+        jQuery(this).addClass("fa-play-circle").removeClass("fa-pause-circle").attr("src", "images/sound-off.png");
         jQuery('body').find('#mymusic').get(0).pause();
     })
     .on('click', '.view-map', function () {
@@ -1625,9 +1625,9 @@ function loadAudio () {
         }
         setTimeout(function () {
             if (!!Array.prototype.find.call(document.querySelectorAll('audio,video'), function (elem) { return elem.duration > 0 && !elem.paused })) {
-                $("body").prepend('<div class="play-music"><img id="thumb-image" class="thumb-image fa-pause-circle" src="'+customBaseURL+'/skin/frontend/default/theme692/images/sound-on.png"><span class="unmute" style="font-size: 14px;position: relative;left: 5px;color: rgb(0, 0, 0);text-transform: uppercase;font-weight: 500;display: inline-block;overflow: hidden;vertical-align: middle;">Tap To Mute</span></div>');
+                $("body").prepend('<div class="play-music"><img id="thumb-image" class="thumb-image fa-pause-circle" src="images/sound-on.png"><span class="unmute" style="font-size: 14px;position: relative;left: 5px;color: rgb(0, 0, 0);text-transform: uppercase;font-weight: 500;display: inline-block;overflow: hidden;vertical-align: middle;">Tap To Mute</span></div>');
             } else {
-                $("body").prepend('<div class="play-music"><img id="thumb-image" class="thumb-image fa-play-circle" src="'+customBaseURL+'/skin/frontend/default/theme692/images/sound-off.png"><span class="unmute" style="font-size: 14px;position: relative;left: 5px;color: rgb(0, 0, 0);text-transform: uppercase;font-weight: 500;display: inline-block;overflow: hidden;vertical-align: middle;">Tap To Unmute</span></div>');
+                $("body").prepend('<div class="play-music"><img id="thumb-image" class="thumb-image fa-play-circle" src="images/sound-off.png"><span class="unmute" style="font-size: 14px;position: relative;left: 5px;color: rgb(0, 0, 0);text-transform: uppercase;font-weight: 500;display: inline-block;overflow: hidden;vertical-align: middle;">Tap To Unmute</span></div>');
             }
         }, 2000);
         setTimeout(function () { jQuery(".unmute").hide("slide", { direction: "left" }, 1000); }, 6000);
